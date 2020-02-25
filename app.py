@@ -1,4 +1,5 @@
 import os
+import subprocess
 from flask import Flask, request, redirect, url_for, render_template
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
@@ -10,14 +11,14 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
-# @app.route('/')
-# def hello():
-#     html = render_template('index.html', a='変数')
-#     return html
-
-
 def allwed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+
+def judegeDog(filepath):
+    result = subprocess.check_output(["python3", "label_image.py", "--image", filepath,
+                                      "--graph", "retrained_graph.pb",  "--labels", "retrained_labels.txt"])
+    return result
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -27,11 +28,19 @@ def uploads_file():
         file = request.files['file']
         if file and allwed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return redirect(url_for('uploaded_file', filename=filename))
+            filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+            file.save(filepath)
+            return redirect(url_for('result_page', filename=filename))
     return html
 
 
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
+@app.route('/result/<filename>')
+def result_page(filename):
+    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    result = judegeDog(filepath)
+    return render_template('result.html', result=result, filename=filename)
+
+
+@app.route('/image/<filename>')
+def image_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
