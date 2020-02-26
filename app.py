@@ -17,8 +17,13 @@ def allwed_file(filename):
 
 def judegeDog(filepath):
     result = subprocess.check_output(["python3", "label_image.py", "--image", filepath,
-                                      "--graph", "retrained_graph.pb",  "--labels", "retrained_labels.txt"])
-    return result
+                                      "--graph", "retrained_graph.pb",  "--labels", "retrained_labels.txt"]).decode("UTF-8")
+    print("result", result.split())
+    first = result.split()[0]
+    first_p = "{0:.1f}".format((float(result.split()[3].split(')')[0]) * 100))
+    second = result.split()[4]
+    second_p = "{0:.1f}".format((float(result.split()[7].split(')')[0]) * 100))
+    return first + ":" + first_p + '%' + " " + second + ":" + second_p + '%'
 
 
 @app.route('/', methods=['GET', 'POST'])
