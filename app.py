@@ -15,7 +15,7 @@ def allwed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-def judegeDog(filepath):
+def judgeDog(filepath):
     result = subprocess.check_output(["python3", "label_image.py", "--image", filepath,
                                       "--graph", "retrained_graph.pb",  "--labels", "retrained_labels.txt"]).decode("UTF-8")
     print("result", result.split())
@@ -23,7 +23,7 @@ def judegeDog(filepath):
     first_p = "{0:.1f}".format((float(result.split()[3].split(')')[0]) * 100))
     second = result.split()[4]
     second_p = "{0:.1f}".format((float(result.split()[7].split(')')[0]) * 100))
-    return first + ":" + first_p + '%' + " " + second + ":" + second_p + '%'
+    return first + ":" + first_p + "%" + " " + second + ":" + second_p + "%"
 
 
 @app.route('/', methods=['GET', 'POST'])
@@ -42,7 +42,7 @@ def uploads_file():
 @app.route('/result/<filename>')
 def result_page(filename):
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-    result = judegeDog(filepath)
+    result = judgeDog(filepath)
     return render_template('result.html', result=result, filename=filename)
 
 
