@@ -1,2 +1,13 @@
+goldenretriever
+pomeranian
+dachshund
+chihuahua
+pug
+germanshepherddog
+siberianhusky
+maltese
+labrador retriever
 frenchbulldog
+american pit bull terrier
 poodle
+bulldog
