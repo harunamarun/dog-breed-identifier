@@ -10,7 +10,7 @@ Let's try to upload!
 2. this service return dog name (e.g. Frenchbulldog, poodle)
 
 <img src="https://user-images.githubusercontent.com/56245555/75405959-8a421b80-5952-11ea-8235-6b3d220c11aa.png" width="400px">
-<img src="https://user-images.githubusercontent.com/56245555/75405925-6b438980-5952-11ea-8391-36b1f958bd8e.png" width="400px">　
+<img src="https://user-images.githubusercontent.com/56245555/75406645-4fd97e00-5954-11ea-9445-71b088e98666.png" width="400px">　
 
 ## Setup Instructions
 
@@ -20,7 +20,7 @@ Let's try to upload!
 git clone https://github.com/harunamarun/dog-discriminator.git
 ```
 
-#### create uploads folder in the top layer:
+#### Create uploads folder in the top layer:
 
 ```
 mkdir uploads
