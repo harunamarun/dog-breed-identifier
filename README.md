@@ -20,7 +20,7 @@ Let's try to upload!
 git clone https://github.com/harunamarun/dog-discriminator.git
 ```
 
-#### create uploads folder in the top layer:
+#### Create uploads folder in the top layer:
 
 ```
 mkdir uploads
