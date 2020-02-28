@@ -28,7 +28,7 @@ bulldog
 ## Setup Instructions
 
 #### Development environment:
-Python: Python 3.6.8
+Python: 3.6.8
 
 #### Clone the repo:
 ```
