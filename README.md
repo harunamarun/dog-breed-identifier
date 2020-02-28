@@ -8,7 +8,22 @@ Let's try to upload!
 2. this service return the dog name (e.g. Frenchbulldog, poodle)
 
 <img src="https://user-images.githubusercontent.com/56245555/75405959-8a421b80-5952-11ea-8235-6b3d220c11aa.png" width="400px">
-<img src="https://user-images.githubusercontent.com/56245555/75406645-4fd97e00-5954-11ea-9445-71b088e98666.png" width="400px">　
+<img src="https://user-images.githubusercontent.com/56245555/75406645-4fd97e00-5954-11ea-9445-71b088e98666.png" width="400px">
+
+#### DOGS BREED
+goldenretriever     
+pomeranian   
+dachshund   
+chihuahua   
+pug   
+germanshepherddog   
+siberianhusky   
+maltese   
+labrador retriever   
+frenchbulldog   
+american pit bull terrier   
+poodle   
+bulldog   
 
 ## Setup Instructions
 
