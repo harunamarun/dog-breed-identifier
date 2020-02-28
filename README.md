@@ -12,20 +12,28 @@ Let's try to upload!
 
 ## Setup Instructions
 
-#### Clone the repo:
+#### Development environment:
+Python: Python 3.6.8
 
+#### Clone the repo:
 ```
 git clone https://github.com/harunamarun/dog-breed-identifier.git
 ```
 
-#### Create uploads folder in the top layer:
-
+#### Create uploads folder in the first layer:
 ```
 mkdir uploads
 ```
 
-#### Start server:
+#### Install independences:
+```
+pip3 install flask
+```
+```
+pip3 install tensorflow==1.4.1
+```
 
+#### Start server:
 ```
 flask run --debugger --reload
 ```
