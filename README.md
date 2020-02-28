@@ -1,13 +1,11 @@
-# dog-discriminator
+# Dog Breed Identifier
 
 "This was created during my time as a student at Code Chrysalis."
 
-This app provides dog discriminator.
-
 Let's try to upload!
 
-1. You upload the picture of dog.
-2. this service return dog name (e.g. Frenchbulldog, poodle)
+1. You upload the picture of the dog.
+2. this service return the dog name (e.g. Frenchbulldog, poodle)
 
 <img src="https://user-images.githubusercontent.com/56245555/75405959-8a421b80-5952-11ea-8235-6b3d220c11aa.png" width="400px">
 <img src="https://user-images.githubusercontent.com/56245555/75406645-4fd97e00-5954-11ea-9445-71b088e98666.png" width="400px">　
@@ -17,7 +15,7 @@ Let's try to upload!
 #### Clone the repo:
 
 ```
-git clone https://github.com/harunamarun/dog-discriminator.git
+git clone https://github.com/harunamarun/dog-breed-identifier.git
 ```
 
 #### Create uploads folder in the top layer:
