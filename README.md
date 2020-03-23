@@ -1,6 +1,6 @@
 # Dog Breed Identifier
 
-"This was created during my time as a student at Code Chrysalis."
+"This was created during my time as a student at <a href=https://www.codechrysalis.io/>Code Chrysalis</a>."  <br>
 
 Let's try to upload!
 
